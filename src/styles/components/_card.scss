@@ -1,0 +1,86 @@
+// Trend card customs
+.trend-card__changePercent {
+  font-size: 0.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 300;
+  position: absolute;
+  bottom: 2px;
+  right: -35px;
+  &--pos {
+    color: green;
+  }
+  &--neg {
+    color: red;
+  }
+}
+// Trend card customs
+
+//custom Card
+.custom-card {
+  min-width: 200px;
+  width: 250px;
+  background-color: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
+  &__divider {
+    height: 1px;
+    background: #f5f5f8;
+    border: none;
+    margin: 0;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    background-color: #f5f5f8;
+    padding: 15px 20px;
+  }
+
+  &__title {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 125px;
+    font-weight: bold;
+  }
+  &__icon {
+  }
+
+  &__body {
+  }
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 0.875rem;
+    &__title {
+      color: #9a9a9a;
+    }
+    &__value {
+      font-weight: 600;
+      position: relative;
+    }
+  }
+
+  &__percent-change {
+    position: absolute;
+    bottom: 2px;
+    right: 15px;
+    font-size: 0.6rem;
+    &--pos {
+      color: #37c995;
+    }
+    &--neg {
+      color: #ff504d;
+    }
+  }
+}
+//custom Card

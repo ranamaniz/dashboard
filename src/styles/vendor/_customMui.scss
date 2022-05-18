@@ -1,0 +1,88 @@
+// Cards
+.MuiPaper-root {
+  &[data-card-theme="active"] {
+    border-color: #1276ff;
+    background-color: #f4f8ff;
+    .MuiCardHeader-root {
+      color: #1276ff;
+      .MuiTypography-root {
+        font-size: inherit;
+      }
+    }
+  }
+}
+
+.MuiCardHeader-root {
+  .MuiTypography-root {
+    font-size: inherit;
+    font-weight: inherit;
+  }
+}
+.MuiCardContent-root {
+  &:last-child {
+    padding-bottom: 10px !important;
+  }
+}
+// Cards end
+
+// List Item
+.MuiListItem-root {
+  &[data-list-theme="inactive"] {
+    color: #666666;
+  }
+  &[data-list-theme="active"] {
+    .MuiListItemButton-root {
+      background: rgba(0, 0, 0, 0.04);
+      color: #017cc9;
+      border-right: 3px solid #388cff;
+    }
+    .MuiListItemIcon-root {
+      color: #017cc9;
+    }
+  }
+}
+
+.MuiListItemIcon-root.css-cveggr-MuiListItemIcon-root {
+  min-width: 25px;
+}
+
+.MuiListItemText-root {
+  .MuiTypography-root {
+    font-size: inherit;
+  }
+}
+// list item end
+
+// Tabs
+.MuiTabs-flexContainer {
+  gap: 2rem;
+}
+// Tabs end
+
+//Input
+.MuiFormControl-root {
+  width: auto !important;
+  .MuiInputAdornment {
+    margin-left: 0px;
+  }
+  .MuiInputBase-root {
+    padding: 0px;
+  }
+  .MuiButtonBase-root {
+    margin-right: 0px;
+  }
+  .MuiOutlinedInput-root {
+    flex-direction: row-reverse;
+  }
+  .MuiInputBase-input {
+    padding: 5px 10px;
+  }
+  .MuiSvgIcon-root {
+    font-size: 1.125rem;
+  }
+}
+
+.MuiPopover-paper {
+  width: auto !important;
+}
+// Input

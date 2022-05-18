@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import * as React from "react";
+import { Routes, Route, Link } from "react-router-dom";
+import Datasets from './pages/Datasets';
+import Projects from './pages/Projects';
+import GrepsrFacility from './pages/GrepsrFacility';
+import MainContainer from './components/Layout/MainContainer';
+import NoMatch from './components/NoMatch';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Routes>
+        <Route path="/" element={<MainContainer />} >
+          <Route index element={<Projects />} />
+          <Route path="/datasets" element={<Datasets />} />
+          <Route path="/grepsr_facility" element={<GrepsrFacility />} />
+          <Route path="*" element={<NoMatch />} />
+        </Route>
+      </Routes>
     </div>
   );
 }
+
 
 export default App;
