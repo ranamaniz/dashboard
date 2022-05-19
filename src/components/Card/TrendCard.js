@@ -33,6 +33,7 @@ export default function TrendCard(props) {
       onClick={() => handleCardSelect(id)}
       key={id}
       data-card-theme={isActive ? "active" : "normal"}
+
     >
       <CardHeader
         title={title}

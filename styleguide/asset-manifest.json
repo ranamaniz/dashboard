@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/build/bundle.63cc5dba.js",
+    "static/media/logo-blue-grepsr.svg": "/static/media/logo-blue-grepsr.620f996b37c6c9768e99442d54a97eec.svg",
+    "index.html": "/index.html"
+  },
+  "entrypoints": [
+    "build/bundle.63cc5dba.js"
+  ]
+}

@@ -44,6 +44,8 @@ const DashBoard = () => {
   const requestTimeOptions = ["This day", "This week", "This month"]
   const dataSetOptions = ["Option 1", "Option 2", "Option 3"]
 
+  const dummyOptions = ["Option 1", "Option 2", "Option 3"]
+
   const trendCardValues = [
     {
       trend_id: 1,
@@ -96,14 +98,11 @@ const DashBoard = () => {
 
   const onTrendSelect = (id) => {
     setActiveTrendId(id)
-
     // api call for trend change and data fetching in chart
   }
 
   useEffect(() => {
     let { title } = trendCardValues.filter(data => data.trend_id === activeTrendId)[0];
-    console.log("activeTrendId", activeTrendId)
-    console.log("title", title)
     setActiveTrendTitle(title)
   }, [activeTrendId])
 
@@ -428,7 +427,6 @@ const DashBoard = () => {
             alignItems: 'center',
             gap: "1rem",
             px: 3,
-            // py: 3
           }
         }
       >
@@ -483,9 +481,7 @@ const DashBoard = () => {
         pb: 3
       }}>
         <Typography sx={{ fontSize: '1.125rem', fontWeight: '500 ' }}>
-
           Trend: {activeTrendTitle}
-
           <Tooltip
             arrow
             sx={{ fontWeight: 400, ml: 0.5, color: "#404040" }}
@@ -506,8 +502,8 @@ const DashBoard = () => {
             columnGap: '1rem'
           }
         }>
-          <SelectComponent placeholder="This day" selectOptions={requestTimeOptions} handleOptionSelect={onRequestOptionChange} />
-          <SelectComponent placeholder="Dataset" selectOptions={dataSetOptions} handleOptionSelect={onRequestOptionChange} />
+          <SelectComponent placeholder="This day" selectOptions={requestTimeOptions} />
+          <SelectComponent placeholder="Dataset" selectOptions={dataSetOptions} />
         </Box>
       </Box>
       {/* Chart Filter Section */}
@@ -517,23 +513,16 @@ const DashBoard = () => {
           px: 3
         }}
       >
-        {/* <LineChart /> */}
         <LineChart
           labels={chartLabels}
           firstLabel="Success"
           secondLabel="Failed"
           chartDataOne={successRequests}
           chartDataTwo={failedRequests}
-
-        // options={chartOptions}
-        // data={chartData}
         />
       </Box>
       {/* Trend Chart Section */}
-
       <Divider sx={{ my: 3 }} />
-
-
       {/* Trend Chart Section */}
 
       {/* Cards filter section */}
@@ -547,8 +536,8 @@ const DashBoard = () => {
           Filters:
         </Typography>
 
-        <SelectComponent placeholder="Test Sellers" selectOptions={requestTimeOptions} handleOptionSelect={onRequestOptionChange} />
-        <SelectComponent placeholder="Indexed Columns" selectOptions={dataSetOptions} handleOptionSelect={onRequestOptionChange} />
+        <SelectComponent placeholder="Test Sellers" selectOptions={dummyOptions} />
+        <SelectComponent placeholder="Indexed Columns" selectOptions={dummyOptions} />
       </Box>
       {/* Cards filter section */}
 

@@ -7,7 +7,7 @@ function Projects() {
     <div>
       <NavigationHeader />
       <Box sx={{ px: 3 }}>
-        <h1>Projects</h1>
+        <h1>Project Info Page</h1>
       </Box>
 
 
